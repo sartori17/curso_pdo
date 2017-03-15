@@ -1,0 +1,31 @@
+SET NAMES utf8;
+
+DROP TABLE IF EXISTS `alunos`;
+CREATE TABLE `alunos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `nota` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `alunos` (`id`, `nome`, `nota`) VALUES
+(1,	'Aluno 1',	10),
+(2,	'Aluno 2',	6),
+(3,	'Aluno 3',	7),
+(4,	'Aluno 4',	10),
+(5,	'Aluno 5',	9),
+(6,	'Aluno 6',	5),
+(7,	'Aluno 7',	6),
+(8,	'Aluno 8',	10),
+(9,	'Aluno 9',	9),
+(10,	'Aluno 10',	8),
+(11,	'Aluno 11',	4),
+(12,	'Aluno 12',	7),
+(13,	'Aluno 13',	6),
+(14,	'Aluno 14',	3),
+(15,	'Aluno 15',	8),
+(16,	'Aluno 16',	4),
+(17,	'Aluno 17',	2),
+(18,	'Aluno 18',	7),
+(19,	'Aluno 19',	1),
+(20,	'Aluno 20',	0);
