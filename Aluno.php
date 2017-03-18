@@ -18,9 +18,10 @@ class Aluno
     }
 
     public function listar () {
-        $query = "SELECT * FROM alunos ORDER BY name;";
+        $query = "SELECT * FROM alunos ORDER BY id;";
 
         $stmt = $this->db->query($query);
+        //$stmt->errorInfo();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 

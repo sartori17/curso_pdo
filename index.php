@@ -10,14 +10,11 @@
  */
 
 require_once "conexaoDB.php";
+require_once "Aluno.php";
 
-$conn = conexaoDB();
+$conexao = conexaoDB();
 
-$query = "select * from alunos;";
-
-$stmt = $conn->prepare($query);
-$stmt->execute();
-$alunos = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+$alunos = new Aluno($conexao);
 
 echo "<h2>Listando todos os alunos</h2>";
 $conteudo .= "<br>";
@@ -30,7 +27,7 @@ $conteudo .= "<tr>
 <td>Opções</td>
 
 </tr>";
-foreach ($alunos as $aluno) {
+foreach ($alunos->listar() as $aluno) {
     $conteudo .= "<tr>";
     $conteudo .= "<td> " . $aluno['id'] . "</td>";
     $conteudo .= "<td>" . $aluno['nome'] . "</td>";
