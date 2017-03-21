@@ -11,6 +11,6 @@ return array(
         'host' => 'localhost',
         'dbname' => 'curso_pdo',
         'user' => 'root',
-        'password' => 'vertrigo'
+        'password' => 'secret'
     )
 );

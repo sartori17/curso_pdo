@@ -1,5 +1,18 @@
 SET NAMES utf8;
 
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `login` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `senha` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `login`, `senha`) VALUES
+(1,	'Administrador',	'admin@admin.com',	'admin',	'$2y$10$6XCIgPf4Xwd9bBMorCJ5huwj83Ul3VFFpx4KPyF1wWLC4kDB8rGxK');
+
 DROP TABLE IF EXISTS `alunos`;
 CREATE TABLE `alunos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

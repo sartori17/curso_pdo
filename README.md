@@ -1,5 +1,17 @@
 # Curso Code Education de PDO
 
+### Atividade 3
+
+```
+Criando a tabela usuarios
+
+Agora há uma restrição! Somente usuários logados podem gerenciar o cadastro de alunos, então você precisará criar uma tabela “usuarios” e criar um CRUD 
+para os usuários também. Lembre-se de acrescentar os inserts dos usuários no nosso arquivo .sql. Acrescente também uma busca por nome de aluno na 
+listagem dos alunos.
+
+Obs.: Para os inserts de usuários, crie um padrão com usuário e senha = admin.
+```
+
 ### Atividade 2 - Criando um CRUD
 
 ```
