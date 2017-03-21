@@ -19,7 +19,24 @@ $usuarios = new Usuario();
 
 $usuarios =  new ServiceDb($conexao, $usuarios);
 
+if (isset($_POST['inputBusca'])) {
+    $usuarios = $usuarios->findAll("nome", $_POST['inputBusca']);
+} else {
+    $usuarios = $usuarios->listar();
+}
+
 echo "<h2>Listando todos os usuarios</h2>";
+
+?><form class="form-inline text-right" method="post" action="listar_usuario.php">
+    <div class="form-group">
+        <label class="sr-only" for="InputBusca">Buscar</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="inputBusca" name="inputBusca" placeholder="Buscar aluno" value="<?php echo (isset($_POST['inputBusca'])) ? $_POST['inputBusca'] : ''; ?>">
+        </div>
+        <button type="submit" class="btn btn-info">Buscar</button>
+    </div>
+</form><?php
+
 $conteudo = "";
 $conteudo .= "<div> <a href='index.php' class='btn btn-sm'>home</a></div>";
 $conteudo .= "<div> <a href='incluir_usuario.php' class='btn btn-sm'>incluir novo registro</a></div>";
@@ -33,7 +50,7 @@ $conteudo .= "<tr>
 <td>Opções</td>
 
 </tr>";
-foreach ($usuarios -> listar() as $usuario) {
+foreach ($usuarios as $usuario) {
     $conteudo .= "<tr>";
     $conteudo .= "<td>{$usuario['id']}</td>";
     $conteudo .= "<td>{$usuario['nome']}</td>";
