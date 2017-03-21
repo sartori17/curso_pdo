@@ -16,6 +16,7 @@ class Aluno implements EntidadeInterface
     private $nome;
     private $nota;
 
+
     /**
      * @param string $table
      */

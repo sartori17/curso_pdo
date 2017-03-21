@@ -16,3 +16,4 @@ echo "<a href='listar_usuario.php' class='btn btn-sm' role='button'>Gerenciar Us
 require_once ('rodape.php');
 ?>
 
+
